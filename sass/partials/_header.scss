@@ -1,0 +1,35 @@
+body > header {
+  position: fixed;
+  z-index: 99;
+  height: 60px;
+  width: 100%;
+  font-weight: 300;
+  font-size: .8em;
+  background-color: $secondary-color;
+  border-bottom: 3px solid hsl($primary-hue, 53%, 21%);
+
+  .media-figure {
+    padding: 20px 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    font-family: $secondary-font;
+
+    & > * {
+      margin: 5px;
+      font-size: 1.2em;
+    }
+  }
+
+  .media-body {
+    padding: 20px 10px;
+  }
+
+  .signin, .logged-in {
+    padding: 20px 10px;
+  }
+
+  a {
+    color: white;
+  }
+}

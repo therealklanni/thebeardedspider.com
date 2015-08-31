@@ -1,0 +1,12 @@
+<header class="media">
+  <div class="media media-figure">
+    <span class="media-figure mini-spider"></span>
+    <span class="media-body">{{title}}</span>
+  </div>
+  <div class="media-body">Twitch status (live, standby)</div>
+  {{#if user}}
+  <div class="logged-in">Welcome, {{user.displayName}} <a href="/auth/twitch/logout">Log out</a></div>
+  {{else}}
+  <div class="signin"><a href="/auth/twitch" class="btn-action">Sign in with Twitch</a></div>
+  {{/if}}
+</header>

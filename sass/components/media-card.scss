@@ -1,0 +1,23 @@
+.media-card {
+  background-color: #341658;
+}
+
+.media-card > .media-figure {
+  /* background-color: darkcyan; */
+  min-height: 160px;
+  width: 250px;
+  margin: 1px;
+  margin-right: 0;
+  background-image: url(/images/DD_Crash.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.media-card > .media-body {
+  background-color: #FDFCFF;
+  padding: 10px;
+  margin: 1px;
+  color: #341658;
+  color: #F2EFF6;
+  background-color: #17161A;
+}

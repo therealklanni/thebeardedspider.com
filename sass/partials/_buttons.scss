@@ -1,0 +1,38 @@
+.btn-flat {
+  padding: 15px;
+  margin: 5px;
+  font-size: .9em;
+  background-color: hsl($primary-hue, 48%, 33%);
+
+  &:hover {
+    background-color: hsl($primary-hue, 48%, 42%);
+  }
+
+  .icon {
+    padding-right: 5px;
+  }
+}
+
+.btn-ghost {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  border-radius: 10px;
+  /* min-width: 50%; */
+  /* align-self: center; */
+  font-weight: bold;
+
+  &:hover {
+    background-color: hsla($primary-hue, 70%, 41%, 0.3);
+  }
+}
+
+.btn-action {
+  background-color: hsla(0, 100%, 100%, 0);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid $action-color;
+  color: $action-color;
+  text-decoration: none;
+}

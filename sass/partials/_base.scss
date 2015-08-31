@@ -1,0 +1,10 @@
+@import '../components/media-object';
+@import '../components/media-card';
+
+$primary-font: 'Fauna One';
+$secondary-font: 'Optimus Princeps';
+
+$primary-hue: 268;
+$primary-color: hsl($primary-hue, 80%, 52%);
+$secondary-color: hsl($primary-hue, 48%, 33%);
+$action-color: hsl(90, 100%, 45%);

@@ -1,0 +1,25 @@
+nav {
+  width: 160px;
+  position: fixed;
+  min-height: calc(100vh - 60px);
+  margin-top: 60px;
+  background-color: hsl($primary-hue, 8%, 9%);
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  a {
+    color: hsl($primary-hue, 23%, 95%);
+    text-decoration: none;
+  }
+}
