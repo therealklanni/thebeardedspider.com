@@ -4,8 +4,6 @@ const debug = bug('bearded:indexRouter')
 import express from 'express'
 const router = express.Router()
 
-import passport from 'passport'
-
 import dotty from 'dotty'
 
 router.get('/', function(req, res, next) {
@@ -14,7 +12,9 @@ router.get('/', function(req, res, next) {
   }
 
   if (req.isAuthenticated()) {
-    viewData.user = req.user
+    let user = req.user
+    user.logo = user.logo || `https://robohash.org/${req.user.displayName}.png?set=set3`
+    viewData.user = user
   }
 
   res.render('index', viewData);
