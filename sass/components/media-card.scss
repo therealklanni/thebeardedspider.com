@@ -1,9 +1,13 @@
+.media-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .media-card {
-  background-color: #341658;
+  background-color: hsl($primary-hue, 53%, 21%);
 }
 
 .media-card > .media-figure {
-  /* background-color: darkcyan; */
   min-height: 160px;
   width: 250px;
   margin: 1px;
@@ -14,10 +18,7 @@
 }
 
 .media-card > .media-body {
-  background-color: #FDFCFF;
   padding: 10px;
   margin: 1px;
-  color: #341658;
-  color: #F2EFF6;
-  background-color: #17161A;
+  background-color: $charcoal;
 }
