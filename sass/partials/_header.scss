@@ -15,9 +15,9 @@ body > header {
     font-size: 1.3em;
     font-family: $secondary-font;
 
-    & > * {
+    .header-title {
       margin: 5px;
-      font-size: 1.2em;
+      font-weight: bold;
     }
   }
 
