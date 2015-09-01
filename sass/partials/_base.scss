@@ -1,6 +1,3 @@
-@import '../components/media-object';
-@import '../components/media-card';
-
 $primary-font: 'Fauna One';
 $secondary-font: 'Optimus Princeps';
 
@@ -11,3 +8,6 @@ $action-color: hsl(90, 100%, 45%);
 $warning-color: hsl(90, 100%, 45%);
 $charcoal: hsl($primary-hue, 8%, 9%);
 $ash: hsl($primary-hue, 25%, 95%);
+
+@import '../components/media-object';
+@import '../components/media-card';
