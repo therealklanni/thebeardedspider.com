@@ -11,6 +11,12 @@
   .icon {
     padding-right: 5px;
   }
+
+  .text {
+    vertical-align: -15%;
+    line-height: .75em;
+    font-family: $secondary-font;
+  }
 }
 
 .btn-ghost {
