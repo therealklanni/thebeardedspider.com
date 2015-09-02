@@ -12,11 +12,11 @@ body > header {
     padding: 20px 10px;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
-    font-family: $secondary-font;
 
     .header-title {
       margin: 5px;
+      font-size: 1.3em;
+      font-family: $secondary-font;
       font-weight: bold;
     }
   }
@@ -25,11 +25,91 @@ body > header {
     padding: 20px 10px;
   }
 
-  .signin, .logged-in {
+  .signin {
     padding: 20px 10px;
   }
 
   a {
     color: white;
+  }
+
+  .logout {
+    font-size: .85em;
+    font-family: 'Optimus Princeps';
+  }
+}
+
+.user {
+  padding: 10px;
+  display: flex;
+
+  .welcome {
+    align-self: center;
+  }
+}
+
+.user-logo {
+  height: 36px;
+  width: 36px;
+  margin-left: 10px;
+  background-color: $charcoal;
+  border: 1px solid;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 36px;
+  width: 36px;
+  color: hsla(0, 0, 0, 0);
+  background-color: hsla(0, 0, 0, 0);
+  cursor: pointer;
+
+  &::before {
+    vertical-align: -15%;
+  }
+
+  &:hover {
+    color: white;
+    background-color: hsla($primary-hue, 0, 100%, 0.5);
+  }
+}
+
+.user-menu-items {
+  // display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 100px;
+  padding: 0px;
+  border: 2px solid hsl($primary-hue, 53%, 21%);
+  color: $ash;
+  background-color: $charcoal;
+  list-style: none;
+
+  a {
+    color: $primary-color;
+    font: 1.3em $secondary-font;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      color: $ash;
+    }
+
+    li {
+      // vertical-align: -15%;
+      // line-height: .75em;
+      padding: 10px 10px 8px;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
   }
 }
