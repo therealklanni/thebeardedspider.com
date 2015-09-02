@@ -70,36 +70,6 @@ section.main-content {
   /* -webkit-filter: drop-shadow(0px 0px 3px lime); */
 }
 
-section.main-vertical {
-  /* background-color: cornflowerblue; */
-  width: 50%;
-  /* margin: 5px; */
-  display: flex;
-  flex-direction: column;
-  /* align-items: flex-end; */
-  /* align-content: stretch; */
-  /* flex-wrap: wrap; */
-}
-
-section.main-vertical:last-child > article {
-  margin-top: 30px;
-}
-
-section.main-vertical > article.videos {
-  margin-top: 0;
-  /* max-height: 170px; */
-}
-
-.main-vertical article.videos {
-  order: -2;
-  /* flex-grow: 2; */
-  display: flex;
-  align-items: stretch;
-  margin-top: 0;
-  /* flex-wrap: wrap; */
-  justify-content: space-around;
-}
-
 article {
   /* background-color: deepskyblue; */
   /* width: 100%; */
