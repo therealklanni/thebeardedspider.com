@@ -14,31 +14,8 @@
 
 body {
   font-family: $primary-font;
-  color: hsla($primary-hue, 25%, 95%, 1);
-  background-color: hsla($primary-hue, 1%, 6%, 1);
-}
-
-footer {
-  padding: 10px;
-}
-
-footer a {
-  color: #7D24E6;
-  text-decoration: none;
-}
-
-footer ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0;
-  margin: 0;
-}
-
-footer li {
-  list-style: none;
-  order: 1;
+  color: $ash;
+  background-color: hsl($primary-hue, 1%, 6%);
 }
 
 section.media {
