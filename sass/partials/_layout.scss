@@ -5,12 +5,21 @@
 .sub-content {
   width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+
+  .videos {
+    order: -2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+  }
 }
 
-.sub-content article.videos {
-  order: -2;
+.videos-title {
+  order: -1;
+}
+
+.social {
+  flex-grow: 2;
   display: flex;
-  align-items: stretch;
-  justify-content: space-around;
 }
