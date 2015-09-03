@@ -18,16 +18,18 @@
       </div>
     </article>
     <article class="videos-title">
-      <h3>Latest (Featured?) Videos</h3>
+      <h3>Most Popular Videos</h3>
     </article>
-    <article class="videos">
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/rJyMzQTA7Mg" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="video">
-        <iframe src="https://www.youtube.com/embed/WpWvIKLqQiw" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </article>
+    <section class="videos">
+      {{#each videos}}
+      <article class="video">
+        <img src="{{thumbnail}}" alt="{{title}}">
+        <div class="video-overlay" data-video-id="{{videoId}}">
+          <i class="fa fa-fw fa-3x fa-youtube-play"></i>
+        </div>
+      </article>
+      {{/each}}
+    </section>
   </section>
 </section>
 <section class="card-content media-cards">
