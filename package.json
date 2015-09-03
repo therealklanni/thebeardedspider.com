@@ -4,10 +4,12 @@
   "private": true,
   "main": "server.js",
   "scripts": {
+    "build": "browserify ./public/scripts/index.js -t babelify -o ./public/scripts/bundle.js",
     "inspect": "node-inspector &",
     "start": "forever -c babel-node server.js",
-    "start:dev": "source .env && npm run inspect && DEBUG=bearded:* nodemon --debug --exec babel-node server.js",
-    "stop": "pm2 stop server.js"
+    "start:dev": "npm run watch && source .env && npm run inspect && DEBUG=bearded:* nodemon --debug --ignore public/ --exec babel-node server.js",
+    "stop": "pm2 stop server.js",
+    "watch": "watchify ./public/scripts/index.js -t babelify -o ./public/scripts/bundle.js -v &"
   },
   "dependencies": {
     "babel": "^5.8.19",
@@ -21,6 +23,7 @@
     "express-session": "^1.11.3",
     "forever": "^0.15.0",
     "hbs": "~3.1.0",
+    "jquery": "^2.1.4",
     "lodash": "^3.10.0",
     "mongoose": "^4.1.0",
     "mongoose-findorcreate": "^0.1.2",
@@ -33,6 +36,8 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
+    "babelify": "^6.3.0",
+    "browserify": "^11.0.1",
     "node-inspector": "^0.12.1",
     "nodemon": "^1.4.0"
   }
