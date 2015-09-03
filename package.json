@@ -4,12 +4,12 @@
   "private": true,
   "main": "server.js",
   "scripts": {
-    "build": "browserify ./public/scripts/index.js -t babelify -o ./public/scripts/bundle.js",
+    "build": "browserify -t babelify ./public/scripts/index.js -o ./public/scripts/bundle.js",
     "inspect": "node-inspector &",
     "start": "forever -c babel-node server.js",
     "start:dev": "npm run watch && source .env && npm run inspect && DEBUG=bearded:* nodemon --debug --ignore public/ --exec babel-node server.js",
     "stop": "pm2 stop server.js",
-    "watch": "watchify ./public/scripts/index.js -t babelify -o ./public/scripts/bundle.js -v &"
+    "watch": "watchify -t babelify ./public/scripts/index.js -o ./public/scripts/bundle.js -v &"
   },
   "dependencies": {
     "babel": "^5.8.19",
