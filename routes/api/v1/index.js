@@ -6,16 +6,16 @@ import dotty from 'dotty'
 import express from 'express'
 
 import db from '../../../lib/db'
+import requireAuth from '../../../lib/middleware/require-auth'
 
 const router = express.Router()
+
+router.all('*', requireAuth)
 
 router.get('/:resource', (req, res) => {
   const resource = dotty.get(req, 'params.resource')
 
   db.read(resource)
-    // .map((users) => {
-    //   return _.pick(users, ['first', 'last'])
-    // })
     .then(docs => {
       res.json(docs)
     })
@@ -30,9 +30,6 @@ router.get('/:resource/:id', (req, res) => {
   const id = dotty.get(req, 'params.id')
 
   db.read(resource, id)
-    // .map((users) => {
-    //   return _.pick(users, ['first', 'last'])
-    // })
     .then(docs => {
       res.json(docs)
     })
