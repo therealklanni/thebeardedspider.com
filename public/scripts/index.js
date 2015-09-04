@@ -19,7 +19,7 @@ $userMenu.on('click', e => {
   $userMenuItems.toggle()
 })
 
-$videoOverlays.on('click', (e) => {
+$videoOverlays.on('click', e => {
   const $target = $(e.currentTarget)
   const videoId = $target.data('videoId')
   $videoLightbox.addClass('opaque')

@@ -7,13 +7,13 @@ const router = express.Router()
 import dotty from 'dotty'
 import got from 'got'
 
-router.get('/', function(req, res, next) {
+router.get('/', (req, res) => {
   const viewData = {
     title: 'The Bearded Spider'
   }
 
   if (req.isAuthenticated()) {
-    let user = req.user
+    const user = req.user
     user.logo = user.logo || `https://robohash.org/${req.user.displayName}.png?set=set3`
     viewData.user = user
   }
@@ -32,9 +32,9 @@ router.get('/', function(req, res, next) {
     json: true
   })
     .then(resp => {
-      let items = resp.body.items
+      const items = resp.body.items
       debug('youtube search results', items)
-      let videos = items.map((video => ({
+      const videos = items.map((video => ({
         thumbnail: dotty.get(video, 'snippet.thumbnails.high.url'),
         videoId: dotty.get(video, 'id.videoId'),
         title: dotty.get(video, 'snippet.title')
@@ -47,6 +47,6 @@ router.get('/', function(req, res, next) {
       debug('failed to get youtube search results')
       res.render('index', viewData)
     })
-});
+})
 
 export default router
