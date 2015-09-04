@@ -27,3 +27,9 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
+
+# misc
+mongodb
+.DS_Store
+
+public/scripts/bundle.js
