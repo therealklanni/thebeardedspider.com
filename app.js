@@ -63,11 +63,9 @@ app.use(localMiddleware)
 import auth from './lib/auth'
 import routes from './routes/index'
 import users from './routes/users'
-import login from './routes/login'
 import api from './routes/api/v1'
 
 app.use('/', routes)
-app.use('/login', login)
 app.use('/auth', auth)
 app.use('/users', users)
 app.use('/api/v1', api)
