@@ -6,9 +6,11 @@
   "scripts": {
     "build": "browserify -t babelify ./public/scripts/index.js -o ./public/scripts/bundle.js",
     "inspect": "node-inspector &",
+    "lint": "xo",
     "start": "forever -c babel-node server.js",
     "start:dev": "npm run watch && source .env && npm run inspect && DEBUG=bearded:* nodemon --debug --ignore public/ --exec babel-node server.js",
     "stop": "pm2 stop server.js",
+    "test": "npm run lint",
     "watch": "watchify -t babelify ./public/scripts/index.js -o ./public/scripts/bundle.js -v &"
   },
   "dependencies": {
@@ -40,6 +42,30 @@
     "babelify": "^6.3.0",
     "browserify": "^11.0.1",
     "node-inspector": "^0.12.1",
-    "nodemon": "^1.4.0"
+    "nodemon": "^1.4.0",
+    "uglifyify": "^3.0.1",
+    "xo": "^0.8.0"
+  },
+  "xo": {
+    "envs": [
+      "es6",
+      "node"
+    ],
+    "esnext": true,
+    "space": true,
+    "semicolon": false,
+    "rules": {
+      "new-cap": [
+        2,
+        {
+          "capIsNewExceptions": [
+            "express.Router"
+          ]
+        }
+      ],
+      "babel/object-curly-spacing": [2, "always"],
+      "no-nested-ternary": 1,
+      "curly": [2, "multi-line"]
+    }
   }
 }
