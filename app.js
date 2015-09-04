@@ -1,7 +1,7 @@
 import path from 'path'
 import logger from 'morgan'
 import express from 'express'
-// import favicon from 'serve-favicon'
+import favicon from 'serve-favicon'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import xhbs from 'express-handlebars'
@@ -18,8 +18,7 @@ app.engine('hbs', xhbs({
 }))
 app.set('view engine', 'hbs')
 
-// uncomment after placing your favicon in /public
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
