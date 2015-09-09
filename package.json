@@ -10,6 +10,7 @@
     "start": "forever -c babel-node server.js",
     "start:dev": "npm run watch && source .env && npm run inspect && DEBUG=bearded:* nodemon --debug --ignore public/ --exec babel-node server.js",
     "stop": "pm2 stop server.js",
+    "sync": "browser-sync start --tunnel --browser 'Google Chrome Canary' --proxy localhost:3000 --files \"sass/**/*.scss, public/scripts/bundle.js\"",
     "test": "npm run lint",
     "watch": "watchify -t babelify ./public/scripts/index.js -o ./public/scripts/bundle.js -v &"
   },
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "babelify": "^6.3.0",
+    "browser-sync": "^2.9.3",
     "browserify": "^11.0.1",
     "node-inspector": "^0.12.1",
     "nodemon": "^1.4.0",
@@ -63,9 +65,15 @@
           ]
         }
       ],
-      "babel/object-curly-spacing": [2, "always"],
+      "babel/object-curly-spacing": [
+        2,
+        "always"
+      ],
       "no-nested-ternary": 1,
-      "curly": [2, "multi-line"]
+      "curly": [
+        2,
+        "multi-line"
+      ]
     }
   }
 }
