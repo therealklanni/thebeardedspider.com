@@ -1,7 +1,6 @@
 import bug from 'debug'
 const debug = bug('bearded:api')
 
-// import _ from 'lodash'
 import dotty from 'dotty'
 import express from 'express'
 
