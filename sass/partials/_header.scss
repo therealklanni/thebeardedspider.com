@@ -25,8 +25,13 @@ body > header {
     padding: 20px 10px;
   }
 
+  .twitch-status {
+    align-self: center;
+  }
+
   .signin {
-    padding: 20px 10px;
+    padding: 0 10px;
+    align-self: center;
   }
 
   a {
@@ -69,6 +74,9 @@ body > header {
   color: hsla(0, 0, 0, 0);
   background-color: hsla(0, 0, 0, 0);
   cursor: pointer;
+  transition:
+    background-color .1s cubic-bezier(0.5, 0.2, 0.3, 1.0),
+    color .1s cubic-bezier(0.5, 0.2, 0.3, 1.0);
 
   &::before {
     vertical-align: -15%;
