@@ -30,6 +30,7 @@
   /* align-self: center; */
   font-family: 'Optimus Princeps';
   font-weight: bold;
+  transition: background-color .2s cubic-bezier(0.5, 0.2, 0.3, 1.0);
 
   &:hover {
     background-color: hsla($primary-hue, 70%, 41%, 0.3);
@@ -37,6 +38,7 @@
 }
 
 .btn-action {
+  height: 42px;
   background-color: hsla(0, 100%, 100%, 0);
   padding: 10px;
   border-radius: 5px;
