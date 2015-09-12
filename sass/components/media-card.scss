@@ -8,13 +8,17 @@
 }
 
 .media-card > .media-figure {
-  min-height: 160px;
-  width: 250px;
+  min-height: 220px;
+  width: calc(200% / 5);
   margin: 1px;
   margin-right: 0;
-  background-image: url(/images/DD_Crash.jpg);
+  background-image: url(/images/logo-white.svg);
   background-size: cover;
   background-position: center center;
+
+  @include large {
+    min-height: 160px;
+  }
 }
 
 .media-card > .media-body {

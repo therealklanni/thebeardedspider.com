@@ -23,6 +23,10 @@ footer {
           color: $action-color;
         }
       }
+
+      @include large {
+        padding: initial;
+        font-size: .8em;
       }
     }
   }

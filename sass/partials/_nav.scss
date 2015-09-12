@@ -1,16 +1,53 @@
 nav {
-  width: 160px;
+  width: 100px;
   position: fixed;
   min-height: calc(100vh - 60px);
-  margin-top: 60px;
+  margin-top: 100px;
   background-color: hsl($primary-hue, 8%, 9%);
+
+  @include large {
+    margin-top: 60px;
+    width: 160px;
+  }
+
+  .logo {
+    height: 100px;
+
+    @include large {
+      height: 160px;
+    }
+  }
+
+  .text {
+    display: none;
+
+    @include large {
+      display: inline;
+    }
+  }
+
+  .icon {
+    line-height: 1.2em;
+    font-size: 3.5em;
+
+    @include large {
+      line-height: .8em;
+      font-size: 1.3333333em;
+      margin: 0;
+    }
+  }
 
   ul {
     padding: 0;
     margin: 0;
 
     li {
+      height: 90px;
       list-style: none;
+
+      @include large {
+        height: inherit;
+      }
 
       &:first-child {
         margin-top: 0;
