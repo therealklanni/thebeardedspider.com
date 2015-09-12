@@ -55,8 +55,12 @@ h4 {
   margin-left: 100px;
 
   @include large {
-    margin-top: 60px;
     margin-left: 160px;
+  }
+
+  @include small {
+    margin-top: 60px;
+    margin-left: 60px;
   }
 }
 
