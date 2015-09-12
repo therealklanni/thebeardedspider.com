@@ -8,7 +8,7 @@ body > header {
   background-color: $secondary-color;
   border-bottom: 3px solid hsl($primary-hue, 53%, 21%);
 
-  @include large {
+  @include small {
     font-size: .8em;
     height: 60px;
   }
@@ -52,7 +52,7 @@ body > header {
   padding: 20px 10px;
   display: flex;
 
-  @include large {
+  @include small {
     padding: 10px;
   }
 
@@ -60,7 +60,7 @@ body > header {
     display: none;
     align-self: center;
 
-    @include large {
+    @include small {
       display: inline;
     }
   }
@@ -73,7 +73,7 @@ body > header {
   background-color: $charcoal;
   border: 1px solid;
 
-  @include large {
+  @include small {
     height: 36px;
     width: 36px;
   }
@@ -96,7 +96,7 @@ body > header {
     background-color .1s cubic-bezier(0.5, 0.2, 0.3, 1.0),
     color .1s cubic-bezier(0.5, 0.2, 0.3, 1.0);
 
-  @include large {
+  @include small {
     height: 36px;
     width: 36px;
   }
@@ -123,7 +123,7 @@ body > header {
   background-color: $charcoal;
   list-style: none;
 
-  @include large {
+  @include small {
     top: 30px;
     width: 100px;
   }
@@ -134,7 +134,7 @@ body > header {
     text-decoration: none;
     width: 100%;
 
-    @include large {
+    @include small {
       font: 1.3em $secondary-font;
     }
 
