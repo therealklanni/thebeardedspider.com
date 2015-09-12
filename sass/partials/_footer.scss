@@ -24,7 +24,7 @@ footer {
         }
       }
 
-      @include large {
+      @include small {
         padding: initial;
         font-size: .8em;
       }
