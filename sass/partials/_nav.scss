@@ -5,13 +5,21 @@ nav {
   margin-top: 100px;
   background-color: hsl($primary-hue, 8%, 9%);
 
-  @include large {
+  @include small {
     margin-top: 60px;
+    width: 60px;
+  }
+
+  @include large {
     width: 160px;
   }
 
   .logo {
     height: 100px;
+
+    @include small {
+      height: 60px;
+    }
 
     @include large {
       height: 160px;
@@ -30,8 +38,8 @@ nav {
     line-height: 1.2em;
     font-size: 3.5em;
 
-    @include large {
-      line-height: .8em;
+    @include small {
+      line-height: 1em;
       font-size: 1.3333333em;
       margin: 0;
     }
@@ -45,7 +53,7 @@ nav {
       height: 90px;
       list-style: none;
 
-      @include large {
+      @include small {
         height: inherit;
       }
 
