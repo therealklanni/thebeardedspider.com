@@ -93,10 +93,12 @@ body {
 
 .videos {
   flex-wrap: wrap;
+  margin-bottom: 30px;
   // padding: 20px;
 
   @include large {
     flex-wrap: nowrap;
+    margin-bottom: 10px;
   }
 
   .video {
