@@ -1,14 +1,11 @@
 .logo {
   background-image: url(/images/logo-black.svg);
-  background-size: 90%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  height: 160px;
-  -webkit-filter: drop-shadow(0px 0px 3px rgb(190,20,255));
-  // -webkit-filter: drop-shadow(0px 0px 3px red);
-  // -webkit-filter: drop-shadow(0px 0px 3px lime);
+}
 
-  img {
-    width: 100%;
-  }
+.logo-white {
+  @extend .logo;
+  background-image: url(/images/logo-white.svg);
 }

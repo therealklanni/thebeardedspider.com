@@ -16,6 +16,13 @@ nav {
 
   .logo {
     height: 100px;
+    background-size: 90%;
+    -webkit-filter: drop-shadow(0px 0px 3px rgb(190,20,255));
+    filter: drop-shadow(0px 0px 3px rgb(190,20,255));
+
+    img {
+      width: 100%;
+    }
 
     @include small {
       height: 60px;

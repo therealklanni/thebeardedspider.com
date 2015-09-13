@@ -29,6 +29,19 @@ body > header {
     padding: 20px 10px;
   }
 
+  .logo {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    -webkit-filter: drop-shadow(1px 1px 1px #666);
+    filter: drop-shadow(1px 1px 1px #666);
+
+    @include small {
+      height: 30px;
+      width: 30px;
+    }
+  }
+
   .twitch-status {
     align-self: center;
   }
