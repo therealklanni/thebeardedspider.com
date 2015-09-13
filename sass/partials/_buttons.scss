@@ -1,8 +1,17 @@
 .btn-flat {
-  padding: 15px;
+  padding: 10px;
   margin: 5px;
   font-size: .9em;
   background-color: hsl($primary-hue, 48%, 33%);
+
+  @include small {
+    font-size: 1.3em;
+  }
+
+  @include medium {
+    font-size: 1em;
+    height: inherit;
+  }
 
   &:hover {
     background-color: hsl($primary-hue, 48%, 42%);
@@ -14,7 +23,7 @@
 
   .text {
     vertical-align: -15%;
-    line-height: .75em;
+    line-height: 1em;
     font-family: $secondary-font;
   }
 }
@@ -45,6 +54,29 @@
   border: 1px solid $action-color;
   color: $action-color;
   text-decoration: none;
+
+  .fa {
+    line-height: 0.3em;
+    vertical-align: -50%;
+
+    & + * {
+      margin-left: 5px;
+    }
+
+    .signin & {
+      @include small {
+        display: none;
+      }
+    }
+  }
+
+  .signin & .text {
+    display: none;
+
+    @include small {
+      display: inline;
+    }
+  }
 
   .media-card & {
     font-size: 2em;
@@ -90,15 +122,18 @@
       -webkit-filter: none;
     }
 
-    @include large {
+    @include small {
       font-size: 3em;
       line-height: 1em;
     }
   }
 
+  @include small {
+    height: 48px;
+  }
+
   @include large {
     border-radius: 10px;
-    height: 48px;
     margin-left: 10px;
     margin-right: 10px;
   }
