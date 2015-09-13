@@ -8,7 +8,7 @@
 }
 
 .media-card > .media-figure {
-  min-height: 220px;
+  min-height: 120px;
   width: calc(200% / 5);
   margin: 1px;
   margin-right: 0;
@@ -25,7 +25,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
+  padding: 5px;
   margin: 1px;
   background-color: $charcoal;
+
+  .btn-action {
+    margin: 10px;
+  }
 }
