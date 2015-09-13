@@ -1,10 +1,10 @@
 body > header {
   position: fixed;
-  height: 100px;
+  height: 50px;
   z-index: 99;
   width: 100%;
   font-weight: 300;
-  font-size: 1.3em;
+  font-size: .6em;
   background-color: $secondary-color;
   border-bottom: 3px solid hsl($primary-hue, 53%, 21%);
 
@@ -18,10 +18,12 @@ body > header {
     align-items: center;
 
     .header-title {
-      margin: 5px;
       font-size: 1.3em;
       font-family: $secondary-font;
       font-weight: bold;
+      padding: 20px 5px;
+      margin-left: -15px;
+      z-index: 1;
     }
   }
 
@@ -62,7 +64,7 @@ body > header {
 }
 
 .user {
-  padding: 20px 10px;
+  padding: 6px;
   display: flex;
 
   @include small {
@@ -80,8 +82,8 @@ body > header {
 }
 
 .user-logo {
-  height: 56px;
-  width: 56px;
+  height: 36px;
+  width: 36px;
   margin-left: 10px;
   background-color: $charcoal;
   border: 1px solid;
@@ -100,8 +102,8 @@ body > header {
   position: absolute;
   top: 0;
   right: 0;
-  height: 56px;
-  width: 56px;
+  height: 36px;
+  width: 36px;
   color: hsla(0, 0, 0, 0);
   background-color: hsla(0, 0, 0, 0);
   cursor: pointer;
@@ -115,7 +117,7 @@ body > header {
   }
 
   &::before {
-    vertical-align: -15%;
+    vertical-align: -42%;
   }
 
   &:hover {
@@ -127,9 +129,9 @@ body > header {
 .user-menu-items {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 0;
-  width: 150px;
+  width: 100px;
   padding: 0px;
   border: 2px solid hsl($primary-hue, 53%, 21%);
   color: $ash;
@@ -137,13 +139,11 @@ body > header {
   list-style: none;
 
   @include small {
-    top: 30px;
-    width: 100px;
   }
 
   a {
     color: $primary-color;
-    font: 1.3em $secondary-font;
+    font: 2em $secondary-font;
     text-decoration: none;
     width: 100%;
 
