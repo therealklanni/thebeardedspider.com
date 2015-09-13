@@ -51,6 +51,22 @@ body > header {
   .signin {
     padding: 0 10px;
     align-self: center;
+
+    .btn-action {
+      .fa {
+        @include small {
+          display: none;
+        }
+      }
+
+      .text {
+        display: none;
+
+        @include small {
+          display: inline;
+        }
+      }
+    }
   }
 
   a {
