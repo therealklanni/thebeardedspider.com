@@ -62,17 +62,39 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  box-shadow: inset 0px 0px 30px #0E021C;
+  box-shadow: inset 0px 0px 30px black;
+  font-size: .8em;
 
   p, .twitch {
-    font-size: 1.75em;
+    font-size: 1em;
+  }
+
+  .twitch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .bio {
+    align-self: flex-end;
+
+    p {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 20px;
+      text-align: justify;
+    }
   }
 
   .sub-content {
     width: 100%;
 
+    &:first-child {
+      height: calc(100vh - 50px);
+    }
+
     .social {
-      height: 180px;
+      height: 100px;
     }
   }
 
@@ -213,28 +235,6 @@ body {
 .twitch-signin {
   display: flex;
   align-self: center;
-}
-
-.bio {
-  padding: 5%;
-  align-self: flex-end;
-
-  p {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: justify;
-  }
-}
-
-.twitch {
-  display: flex;
-  /* flex-direction: column-reverse; */
-  flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: center;
-  /* align-content: center; */
-  /* flex-wrap: wrap; */
 }
 
 p {
