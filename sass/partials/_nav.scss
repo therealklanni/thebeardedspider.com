@@ -1,17 +1,33 @@
-nav {
-  width: 50px;
-  position: fixed;
-  min-height: calc(100vh - 50px);
-  margin-top: 50px;
-  background-color: hsl($primary-hue, 8%, 9%);
+$nav-width: 50px;
+$nav-width-small: 60px;
+$nav-width-large: 160px;
+
+@mixin nav-spacing {
+  margin-left: $nav-width;
 
   @include small {
-    margin-top: 60px;
-    width: 60px;
+    margin-left: $nav-width-small;
   }
 
   @include large {
-    width: 160px;
+    margin-left: $nav-width-large;
+  }
+}
+
+nav {
+  width: $nav-width;
+  position: fixed;
+  min-height: calc(100vh - 50px);
+  background-color: hsl($primary-hue, 8%, 9%);
+
+  @include header-spacing;
+
+  @include small {
+    width: $nav-width-small;
+  }
+
+  @include large {
+    width: $nav-width-large;
   }
 
   .logo {

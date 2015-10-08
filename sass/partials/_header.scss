@@ -1,3 +1,14 @@
+$header-height: 50px;
+$header-height-small: 60px;
+
+@mixin header-spacing {
+  margin-top: $header-height;
+
+  @include small {
+    margin-top: $header-height-small;
+  }
+}
+
 body > header {
   position: fixed;
   height: 50px;
@@ -10,7 +21,7 @@ body > header {
 
   @include small {
     font-size: .8em;
-    height: 60px;
+    height: $header-height-small;
   }
 
   .media-figure {

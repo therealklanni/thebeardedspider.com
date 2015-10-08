@@ -39,17 +39,8 @@ body {
 }
 
 .main-panel {
-  margin-top: 50px;
-  margin-left: 50px;
-
-  @include small {
-    margin-top: 60px;
-    margin-left: 60px;
-  }
-
-  @include large {
-    margin-left: 160px;
-  }
+  @include header-spacing;
+  @include nav-spacing;
 }
 
 .main-content {
